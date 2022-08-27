@@ -1,3 +1,4 @@
+
 # Deep-Reinforcement-Learning-Course
 Deep Reinforcement Learning Course
 
@@ -21,15 +22,12 @@ Train an agent using OpenAI Gym's Cartpole environment with a Hill Climbing opti
   
 Train an agent using OpenAI Gym's Cartpole environment with the REINFORCE algorithm.
 
-REINFORCE:
+The goal in policy based methods is to maximize the expected return or utility function. REINFORCE is a math trick to make the calculation easier.
+We can also utilize the pytorch .backward() function to compute the gradient. Thus, we need just find the policy loss by looping over trajectories and 
+summing up log output * reward.
 
-  i) use the current policy to collect m trajectories
-  
-  ii) use the trajectories to estimate gradient of E[R(t(w))]
-  
-  iii) update the weights w <- w + alpha*gradient
-  
-  iv) loop over i-iii
+I have more info in the reinforce file.
+
 
 
 
