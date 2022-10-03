@@ -5,6 +5,44 @@ Deep Reinforcement Learning Course
 
 # U-DRL:
 
+## RL Intro:
+#### Markov Decision Process: 
+
+MDP is defiend by a finite set of states, actions, rewards, One step dynamic of the environment, and discount rate.
+
+If you can reformulate your problem as an MDP, then you can solve it using RL.
+
+
+#### State Value Function: 
+
+Expected return if the agent starts at state s and follows the policy $\pi$ for future time steps
+
+$v_{\pi} (s) = E_{\pi}[G_{t} | S_{t} = s]$
+
+
+#### Bellman Expectation Equations: 
+
+$v_{\pi}(s) = E_{\pi}[R_{t+1} + \gamma*v_{\pi}(S_{t+1}) | S_{t} = s]$
+
+
+#### Action Value Function: 
+
+Expected return if the agent starts at state s, then takes action a and follows the policy $\pi$ for future time steps
+
+$q_{\pi} (s, a) = E_{\pi}[G_{t} | S_{t} = s, A_{t} = a]$
+
+
+#### Optimol Policy: 
+
+Optimol Policies $\pi^{*}$ have the same state value function and action value function.
+
+Once the agent determines the optimal action-value function $q_{\*}$, it can quickly obtain an optimal policy $\pi_{\*}$ by setting
+$\pi_{\*}(s) = argmax_a q_{\pi} (s, a)$
+
+ 
+
+
+
 
 ## Policy Based Methods Tutorials:
 
