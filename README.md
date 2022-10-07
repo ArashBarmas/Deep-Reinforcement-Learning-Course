@@ -8,14 +8,14 @@ Deep Reinforcement Learning Course
 ## RL Intro:
 #### Markov Decision Process: 
 
-MDP is defiend by a finite set of states, actions, rewards, One step dynamic of the environment, and discount rate.
+MDP is defiend by a finite set of states, actions, rewards, one step dynamic of the environment, and discount rate.
 
 If you can reformulate your problem as an MDP, then you can solve it using RL.
 
 
 #### State Value Function: 
 
-Expected return if the agent starts at state s and follows the policy $\pi$ for future time steps
+Expected return if the agent starts at state s and follows the policy $\pi$ for future time steps.
 
 $v_{\pi} (s) = E_{\pi}[G_{t} | S_{t} = s]$
 
@@ -27,7 +27,7 @@ $v_{\pi}(s) = E_{\pi}[R_{t+1} + \gamma*v_{\pi}(S_{t+1}) | S_{t} = s]$
 
 #### Action Value Function: 
 
-Expected return if the agent starts at state s, then takes action a and follows the policy $\pi$ for future time steps
+Expected return if the agent starts at state s, then takes action a and follows the policy $\pi$ for future time steps.
 
 $q_{\pi} (s, a) = E_{\pi}[G_{t} | S_{t} = s, A_{t} = a]$
 
@@ -38,6 +38,24 @@ Optimol Policies $\pi^{*}$ have the same state value function and action value f
 
 Once the agent determines the optimal action-value function $q_{\*}$, it can quickly obtain an optimal policy $\pi_{\*}$ by setting
 $\pi_{\*}(s) = argmax_a q_{\pi} (s, a)$
+
+
+
+#### Monte Carlo Method: 
+
+One way to estimate action-value function or Q-table. Q-table has states as its rows and actions as its columns and shows the expected return if the agent starts at state s, then takes action a and follows the policy $\pi$ for future time steps.
+
+#### Monte Carlo Control: 
+
+The agent alternates between these two steps, with:
+
+1. Policy Evaluation: using the policy π to construct the Q-table, and
+
+2. Policy Improvement: improving the policy by changing it to be ϵ-greedy with respect to the Q-table (π ← ϵ-greedy(Q), π ← π′)
+
+we will eventually obtain the optimal policy π∗
+
+
 
  
 
