@@ -41,20 +41,26 @@ $\pi_{\*}(s) = argmax_a q_{\pi} (s, a)$
 
 
 
-#### Monte Carlo Method: 
+#### Monte Carlo Prediction: 
 
 One way to estimate action-value function or Q-table. Q-table has states as its rows and actions as its columns and shows the expected return if the agent starts at state s, then takes action a and follows the policy $\pi$ for future time steps.
+
 
 #### Monte Carlo Control: 
 
 The agent alternates between these two steps, with:
 
-1. Policy Evaluation: using the policy π to construct the Q-table, and
+1. Policy Evaluation: using the policy π to construct the Q-table with alpha updates(high alpha means more emphasis on more recent return), and
 
-2. Policy Improvement: improving the policy by changing it to be ϵ-greedy with respect to the Q-table (π ← ϵ-greedy(Q), π ← π′)
+2. Policy Improvement: improving the policy by changing it to be ϵ-greedy(limit of ϵ to zero)  with respect to the Q-table (π ← ϵ-greedy(Q), π ← π′)
 
 we will eventually obtain the optimal policy π∗
 
+
+
+#### Greedy in the Limit with Infinite Exploration GLIE: 
+
+MC control converges to the optimol policy if every s,a is visited infinitely many times.
 
 
  
